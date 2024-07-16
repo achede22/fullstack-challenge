@@ -1,0 +1,13 @@
+name: pr-pipeline
+
+on: pull_request
+
+jobs:
+  block-pr:
+      name: check-pr-branches
+      runs-on: ubuntu-latest
+      steps:
+        - uses: italojs/check-pr-branches@v1
+          with:
+              when_base: stage
+              allow_only: devel
