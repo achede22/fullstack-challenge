@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push
+
+jobs:
+  my_job:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+
+    - name: NPM install cache
+    # You may pin to the exact commit or the version.
+    # uses: c-hive/gha-npm-cache@2de807f96074eec2c36c2d321c20724cd04112dd
+      uses: c-hive/gha-npm-cache@v1
+    #    with:
+    # Directory containing package-lock.json
+     #   directory: # optional, default is .
+          
+
+          
+
+
